@@ -6,12 +6,14 @@ const PRODUCTO = "Polvo Limpiador DRAINPRO";
 const DROPI_ID = "69746";   // ID del producto DRAINPRO en Dropi
 const N8N_CONFIRM = "https://n8n-production-8a42.up.railway.app/webhook/d4f51138-9611-4f93-9c51-e137fea97dcc"; // confirmación WhatsApp
 const PANEL_URL = "https://script.google.com/macros/s/AKfycbwRayJ1bThod83lMlvOWSdE8MAedTPLbaxIcrDN301PYUk7SWZoen6pFE5rScYiuvra/exec"; // panel: visitas/conversión
+/* ---- seguimiento de campaña: captura ?cmp del anuncio (Meta) para atribución exacta por teléfono ---- */
+try{ var _qsC=new URLSearchParams(location.search); var _cmpV=_qsC.get("cmp")||_qsC.get("utm_campaign")||""; if(_cmpV){ try{localStorage.setItem("_cmp",_cmpV);}catch(e){} window._CMP=_cmpV; } else { try{ window._CMP=localStorage.getItem("_cmp")||""; }catch(e){ window._CMP=""; } } }catch(e){ window._CMP=""; }
+window._trackVenta=function(phone){ try{ if(window._CMP&&phone) fetch("https://n8n-production-8a42.up.railway.app/webhook/track-click",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phone:phone,cmp:window._CMP,producto:PRODUCTO,canal:"pagina"})}).catch(function(){}); }catch(e){} };
 const clp = n => "$" + Math.round(n).toLocaleString("es-CL");
 
 /* ---------- Contador de visitas (para el panel) ---------- */
 function trackPanel(tipo){
-  if(!PANEL_URL) return;
-  try{ fetch(PANEL_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({tipo:tipo})}).catch(function(){}); }catch(e){}
+  try{ fetch("https://n8n-production-8a42.up.railway.app/webhook/track-visita",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({pagina:PRODUCTO,producto:PRODUCTO,tipo:tipo})}).catch(function(){}); }catch(e){}
 }
 // una visita por sesión (no recuenta si recarga en la misma pestaña)
 try{ if(!sessionStorage.getItem("jaye_vis")){ sessionStorage.setItem("jaye_vis","1"); trackPanel("visita"); } }catch(e){ trackPanel("visita"); }
@@ -332,21 +334,29 @@ form.addEventListener("submit",async e=>{
   };
   const btn=document.getElementById("submitBtn");
   btn.disabled=true; btn.textContent="Enviando…";
+  /* El pedido entra al PANEL por el mismo webhook de la tienda: ahi corren la
+     huella de riesgo, los candados y la confirmacion por WhatsApp. La planilla
+     vieja ya no recibe pedidos (solo abandonados); mandar a las dos montaba
+     el pedido dos veces en Dropi. Solo se agradece si el pedido ENTRO. */
+  function mandarPanel(datos,intento){
+    return fetch("https://n8n-production-8a42.up.railway.app/webhook/pedido-tienda",{
+      method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(datos)
+    }).then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return true; })
+    .catch(function(e){
+      if(intento<3){ return new Promise(function(ok){ setTimeout(ok,1500*intento); }).then(function(){ return mandarPanel(datos,intento+1); }); }
+      throw e;
+    });
+  }
   try{
-    if(SHEET_URL){
-      await fetch(SHEET_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)});
-    } else { console.warn("SHEET_URL vacío: configúralo en app.js para guardar pedidos."); }
-    // Confirmación por WhatsApp (n8n) — formato que espera el flujo
-    if(N8N_CONFIRM){
-      var telWA = (form.codpais.value+"").replace(/\D/g,"") + telLimpio();
-      fetch(N8N_CONFIRM,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
-        customer:{ phone: telWA, email: form.correo.value.trim() },
-        shipping_address:{ first_name: nombre.split(" ")[0], address1: dir, province: form.region.value, city: form.comuna.value, address2: form.referencia.value.trim(), country_code: form.codpais.value },
-        order_number: "JG-"+String(Date.now()).slice(-6),
-        line_items:[{ title: PRODUCTO, quantity: qty }],
-        total_price: String(total)
-      })}).catch(function(){});
-    }
+    var telWA = (form.codpais.value+"").replace(/\D/g,"") + telLimpio();
+    await mandarPanel({
+      nombre:nombre, indicativo:form.codpais.value, telefono:telLimpio(),
+      producto:PRODUCTO, total:total, precio:total, cantidad:qty,
+      direccion:dir, comuna:form.comuna.value, region:form.region.value,
+      referencia:form.referencia.value.trim(), correo:form.correo.value.trim(),
+      origen:"drainpro", pais:(form.codpais.value||"").replace(/\D/g,""), pais_despacho:"CL"
+    },1);
+    window._trackVenta&&window._trackVenta(telWA);
     // marcar el pedido abandonado como COMPLETADO (misma fila por sid)
     if(abandonedSent) postAbandono(Object.assign(currentFormData(),{estado:"COMPLETADO"}));
     // Píxel de Meta: Purchase (conversión)
