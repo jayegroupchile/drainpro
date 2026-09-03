@@ -19,7 +19,12 @@ function trackPanel(tipo){
 try{ if(!sessionStorage.getItem("jaye_vis")){ sessionStorage.setItem("jaye_vis","1"); trackPanel("visita"); } }catch(e){ trackPanel("visita"); }
 
 /* ---------- Píxel de Meta (helper seguro) ---------- */
-function fb(evento, datos){ if(window.fbq){ try{ fbq("track", evento, datos || {}); }catch(e){} } }
+/* El tercer parametro es el eventID. Sirve para que Meta UNA este evento del navegador
+   con el que manda el servidor por CAPI: si los dos llevan el mismo id, cuenta UNA venta.
+   Sin esto cada venta se contaba dos veces (medido 2-sep: 4 ventas -> Meta reportaba 8). */
+function fb(evento, datos, evId){
+  if(window.fbq){ try{ fbq("track", evento, datos || {}, evId ? {eventID: evId} : undefined); }catch(e){} }
+}
 /* ---------- Píxel de TikTok (helper seguro) ---------- */
 function tt(evento, datos){ if(window.ttq){ try{ ttq.track(evento, datos || {}); }catch(e){} } }
 // ViewContent al cargar la página de producto
@@ -264,6 +269,9 @@ function setInvalid(id,bad){ document.getElementById(id).closest(".field").class
    Apenas hay un teléfono válido, guardamos lo que el cliente lleva lleno
    (en la hoja "Pedidos Abandonados") para poder escribirle si no completa. */
 const ORDER_SID = "AB" + Date.now() + Math.floor(Math.random()*1e6);
+/* id unico del evento de compra: lo comparten el pixel del navegador y el CAPI
+   del servidor para que Meta no cuente la misma venta dos veces */
+const EVENT_ID = "web-" + ORDER_SID;
 // Si el cliente escribe su número CON el código de país (ej: +56 9...), se lo quitamos para no duplicarlo
 function telLimpio(){
   var cc=(form.codpais.value||"").replace(/\D/g,"");
@@ -354,13 +362,15 @@ form.addEventListener("submit",async e=>{
       producto:PRODUCTO, total:total, precio:total, cantidad:qty,
       direccion:dir, comuna:form.comuna.value, region:form.region.value,
       referencia:form.referencia.value.trim(), correo:form.correo.value.trim(),
-      origen:"drainpro", pais:(form.codpais.value||"").replace(/\D/g,""), pais_despacho:"CL"
+      origen:"drainpro", pais:(form.codpais.value||"").replace(/\D/g,""), pais_despacho:"CL",
+      /* mismo id para el evento del navegador y el del servidor: asi Meta cuenta UNA venta */
+      event_id: EVENT_ID
     },1);
     window._trackVenta&&window._trackVenta(telWA);
     // marcar el pedido abandonado como COMPLETADO (misma fila por sid)
     if(abandonedSent) postAbandono(Object.assign(currentFormData(),{estado:"COMPLETADO"}));
     // Píxel de Meta: Purchase (conversión)
-    fb("Purchase", { content_name: PRODUCTO, content_ids: ["drainpro"], contents: [{ id: "drainpro", quantity: qty }], value: total, currency: "CLP" });
+    fb("Purchase", { content_name: PRODUCTO, content_ids: ["drainpro"], contents: [{ id: "drainpro", quantity: qty }], value: total, currency: "CLP" }, EVENT_ID);
     // Píxel de TikTok: CompletePayment (conversión)
     tt("CompletePayment", { content_id: "drainpro", content_name: PRODUCTO, content_type: "product", contents: [{ content_id: "drainpro", content_name: PRODUCTO, quantity: qty }], value: total, currency: "CLP" });
     form.style.display="none";
