@@ -444,6 +444,7 @@ form.addEventListener("submit",async e=>{
    sale con su paleta). Al ganar entra a la página al instante.
    ============================================================ */
 (function(){
+  return;   /* 26-09 James: "quita esa ruleta". Queda apagada; el código sigue abajo por si la vuelve a pedir. */
   try{ if(sessionStorage.getItem('jaye_ruleta')) return; }catch(e){}
   var cf=document.createElement('script'); cf.src='confetti.min.js'; cf.async=true; document.head.appendChild(cf);
 

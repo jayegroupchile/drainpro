@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DRAINPRO · Polvo Limpiador de Tuberías | Destapa en 15 minutos | Pago contra entrega</title>
-<meta name="description" content="DRAINPRO: el limpiador de desagües más potente. Destapa lavaplatos, inodoros, duchas y tuberías en minutos. No daña PVC, metal ni cerámica. Envío gratis y pago contra entrega en todo Chile.">
-<meta property="og:title" content="DRAINPRO · Destapa tus tuberías al instante">
-<meta property="og:description" content="Acción rápida y efectiva para cocina y baño. Envío gratis · Pago contra entrega en Chile.">
+<title>DRAINPRO · Polvo destapador de cañerías | Destapa en 20 minutos | Pago contra entrega</title>
+<meta name="description" content="DRAINPRO: polvo de oxígeno activo que destapa lavaplatos, duchas, inodoros y cañerías en 20 minutos. No daña PVC, metal ni cobre. Envío gratis y pago contra entrega en todo Chile.">
+<meta property="og:title" content="DRAINPRO · Destapa tus cañerías en 20 minutos">
+<meta property="og:description" content="Sin gásfiter, sin soda cáustica. Envío gratis · Pago contra entrega en Chile.">
 <meta property="og:type" content="product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Proza+Libre:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20">
 <!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -30,211 +30,169 @@ fbq('track','PageView');
 </script>
 <!-- TikTok Pixel Code End -->
 </head>
-<body>
+<body class="dp">
 
-<!-- MARQUEE 1 -->
-<div class="marquee" aria-label="Beneficios">
-  <div class="marquee__track">
-    <span>Destapa en 15 minutos</span><span>Envío Gratis</span><span>Pago Contra Entrega</span><span>Resultados Garantizados</span><span>No daña tus tuberías</span>
-    <span aria-hidden="true">Destapa en 15 minutos</span><span aria-hidden="true">Envío Gratis</span><span aria-hidden="true">Pago Contra Entrega</span><span aria-hidden="true">Resultados Garantizados</span><span aria-hidden="true">No daña tus tuberías</span>
+<!-- BARRA SUPERIOR -->
+<div class="dp-barra" aria-label="Beneficios">
+  <div class="dp-barra__track">
+    <span>Envío gratis a todo Chile</span><span>Pagas al recibir</span><span>Despacho en 2 a 4 días</span><span>Destapa en 20 minutos</span>
+    <span aria-hidden="true">Envío gratis a todo Chile</span><span aria-hidden="true">Pagas al recibir</span><span aria-hidden="true">Despacho en 2 a 4 días</span><span aria-hidden="true">Destapa en 20 minutos</span>
   </div>
 </div>
 
-<!-- HEADER -->
-<header class="header">
+<!-- HEADER (sin menú: nada que saque de la página) -->
+<header class="header dp-head">
   <div class="wrap">
-    <button class="ham" id="hamBtn" aria-label="Menú">☰</button>
-    <div class="logo"><img src="img/WhatsApp_Image_2026-03-26_at_11.36.34_PM_fa94a861-7009-_003.webp" alt="Jaye Group"></div>
-    <div class="icons">
-      <span class="ico" data-scroll="#pedido" role="button" aria-label="Buscar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.6" y1="15.6" x2="21" y2="21"/></svg>
-      </span>
-      <span class="cart ico" data-scroll="#pedido" role="button" aria-label="Ver pedido">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
-        <span class="b" id="cartCount">0</span>
-      </span>
-    </div>
+    <div class="dp-logo" aria-label="Jaye Group"><span class="dp-logo-j">JAYE</span><i></i><span class="dp-logo-g">GROUP</span></div>
+    <button class="dp-head-cta" data-scroll="#pedido">Pedir</button>
   </div>
-  <nav class="menu" id="menu" hidden>
-    <a data-scroll="#pedido"><svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/><path d="M2.5 3.5h2.3l1.9 11.5h10.8l1.6-8H6"/></svg>Comprar ahora</a>
-    <a data-scroll="#resenas"><svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3.5l2.6 5.2 5.8.9-4.2 4 1 5.7-5.2-2.7-5.2 2.7 1-5.7-4.2-4 5.8-.9z"/></svg>Reseñas</a>
-    <a data-scroll="#faq"><svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.3 9.2a2.8 2.8 0 0 1 5.4 1c0 1.9-2.7 2.1-2.7 4"/><circle cx="12" cy="17" r="0.7" fill="currentColor" stroke="none"/></svg>Preguntas frecuentes</a>
-    <a href="https://wa.me/56964775539" target="_blank" rel="noopener"><svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 3.5z"/></svg>Contacto (WhatsApp)</a>
-  </nav>
 </header>
 
-<!-- FOTO PRINCIPAL DEL HERO -->
-<section class="banner banner--full">
-  <img src="img/antes-y-despu-s-real_006.webp" alt="DRAINPRO — antes: tubería obstruida, después: tubería limpia" fetchpriority="high">
+<!-- HERO: video a sangre, letras arriba en cascada -->
+<section class="dp-hero" id="inicio">
+  <video class="dp-video" autoplay muted loop playsinline preload="none" poster="img/dp-hero-poster.webp?v=1"
+    aria-label="El polvo cae al desagüe, burbujea y el agua se va limpia">
+    <source src="img/dp-hero.mp4?v=1" type="video/mp4">
+  </video>
+  <div class="dp-vineta" aria-hidden="true"></div>
+  <div class="dp-burbujas" aria-hidden="true"></div>
+  <div class="dp-sobre">
+    <span class="dp-rot dp-casc" style="--d:.1s">Oxígeno activo · sin gásfiter · sin soda cáustica</span>
+    <h1 class="dp-h1">
+      <span class="dp-ln"><span class="dp-pal" style="--d:.25s">El</span> <span class="dp-pal" style="--d:.34s">desagüe</span> <span class="dp-pal" style="--d:.43s">tapado,</span></span>
+      <span class="dp-ln"><em><span class="dp-pal" style="--d:.55s">destapado</span> <span class="dp-pal" style="--d:.64s">en</span> <span class="dp-pal" style="--d:.73s">20</span> <span class="dp-pal" style="--d:.82s">minutos.</span></em></span>
+    </h1>
+    <p class="dp-frase dp-casc" style="--d:1s">Lo echas, agregas agua caliente y el agua vuelve a bajar. Lavaplatos, ducha, lavamanos e inodoro.</p>
+    <div class="dp-hero-cta dp-casc" style="--d:1.15s">
+      <button class="dp-btn" data-scroll="#pedido" data-qty="6">Quiero destaparlo <span>6 unidades · $25.500</span></button>
+      <span class="dp-hero-nota">Envío gratis · pagas al recibir</span>
+    </div>
+  </div>
+  <a class="dp-baja" href="#dp-cifras" aria-label="Bajar"><span></span></a>
 </section>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap">
-    <div class="badges">
-      <span>💧 Limpia desagües</span>
-      <span>🛡️ No daña tuberías</span>
-      <span>🚚 Envío Gratis</span>
-    </div>
-    <h1>Polvo Limpiador DRAINPRO</h1>
-    <p class="sub">¡Destapa tus tuberías al instante!</p>
-    <div class="valueprops">
-      <div class="vp"><h3>Destapa en 15 minutos</h3><p>El limpiador de tuberías más potente. Acción rápida y efectiva en cocina y baño.</p></div>
-      <div class="vp"><h3>Versatilidad total</h3><p>Un solo producto para lavaplatos, inodoros, duchas y desagües.</p></div>
-    </div>
-    <p class="priceline"><span class="lbl">Precio unidad</span> 🏷️ <span class="now">$17.000 CLP</span></p>
-
-    <!-- Banners apilados (las 3 imágenes que diste) -->
-    <div class="imgcard">
-      <img src="img/tarjeta1.png" alt="Adiós a los atascos y malos olores — 3X1 $19.950" fetchpriority="high">
-    </div>
-    <div class="imgcard">
-      <img src="img/tarjeta2.png" alt="DRAINPRO — Limpiador profesional de desagües" loading="lazy">
-    </div>
-    <div class="imgcard">
-      <img src="img/tarjeta3.jpeg" alt="Mira la diferencia en 15 minutos — antes y después" loading="lazy">
-    </div>
-
-    <button class="btn btn--cta btn--block btn--slim" data-scroll="#pedido">Comprar ahora</button>
-
-    <div class="subben">
-      <div>💧 Limpia desagües</div>
-      <div>🔧 Versatilidad total</div>
-      <div>🛡️ Seguro y efectivo</div>
-    </div>
+<!-- CIFRAS -->
+<section class="dp-sec dp-agua dp-cifras" id="dp-cifras">
+  <div class="dp-med">
+    <div><b data-hasta="20">20</b><span>minutos y baja el agua</span></div>
+    <div><b data-hasta="0" data-antes="$" data-rodillo="1">$0</b><span>de gásfiter</span></div>
+    <div><b data-hasta="4">4</b><span>desagües: cocina, ducha, lavamanos e inodoro</span></div>
   </div>
 </section>
 
-<!-- OFERTA -->
-<section>
-  <div class="wrap">
-    <div class="promobox">
-      <div class="promo-hero"><img src="img/promo-combos.png" alt="Elige tu combo y ahorra más — DRAINPRO" loading="lazy"></div>
-
-      <div class="packlist">
-        <div class="packrow" data-scroll="#pedido" data-qty="3">
-          <p class="pr-units">3 Unidades</p>
-          <span class="pr-save pr-save--o">Ahorra 60%</span>
-          <p class="pr-price"><s>$51.000</s> <b>$19.950</b></p>
-        </div>
-        <div class="packrow" data-scroll="#pedido" data-qty="6">
-          <p class="pr-units">6 Unidades</p>
-          <span class="pr-save pr-save--g">Ahorra 75%</span>
-          <p class="pr-price"><s>$102.000</s> <b>$25.500</b></p>
-        </div>
-        <div class="packrow" data-scroll="#pedido" data-qty="10">
-          <p class="pr-units">10 Unidades</p>
-          <span class="pr-save pr-save--y">Ahorra 80%</span>
-          <p class="pr-price"><s>$170.000</s> <b>$34.000</b></p>
-        </div>
+<!-- BLOQUE DE COMPRA CORTO: frasco, nombre, escalera, botón -->
+<section class="dp-sec dp-compra">
+  <div class="wrap dp-compra-grid">
+    <div class="dp-frasco-caja">
+      <img src="img/dp-frasco.webp?v=1" alt="Frasco de DRAINPRO, polvo destapador de cañerías Wild Tornado" width="600" height="1156" fetchpriority="high">
+      <span class="dp-sello">Pack de 3, 6 o 10</span>
+    </div>
+    <div class="dp-compra-txt">
+      <span class="dp-rot">Polvo destapador</span>
+      <h2 class="dp-h2">DRAINPRO</h2>
+      <p class="dp-sub">Un frasco por cada desagüe de la casa. El pack de 6 es el que más piden: uno para la cocina, uno para cada baño y dos guardados para la próxima.</p>
+      <div class="dp-escalera">
+        <button type="button" class="dp-esc" data-scroll="#pedido" data-qty="3"><b>3 unidades</b><span>$19.950</span></button>
+        <button type="button" class="dp-esc dp-esc--top" data-scroll="#pedido" data-qty="6"><i>Más pedido</i><b>6 unidades</b><span>$25.500</span></button>
+        <button type="button" class="dp-esc" data-scroll="#pedido" data-qty="10"><b>10 unidades</b><span>$34.000</span></button>
       </div>
-
-      <a class="btn btn--azul btn--block ordena" data-scroll="#pedido">🛒 ¡ORDENA AHORA!</a>
-
-      <div class="cdstrip">
-        <p style="font-weight:800;margin-bottom:8px">Oferta por tiempo limitado</p>
-        <div class="countdown" id="countdown">
-          <div class="box"><b id="cd-d">00</b><span>Días</span></div>
-          <div class="box"><b id="cd-h">00</b><span>Hrs</span></div>
-          <div class="box"><b id="cd-m">00</b><span>Min</span></div>
-          <div class="box"><b id="cd-s">00</b><span>Seg</span></div>
-        </div>
+      <button class="dp-btn dp-btn--ancho" data-scroll="#pedido" data-qty="6">Pedir 6 por $25.500</button>
+      <div class="dp-cuenta">
+        <span>La oferta termina en</span>
+        <div class="dp-cd"><b id="cd-d">00</b><i>d</i><b id="cd-h">00</b><i>h</i><b id="cd-m">00</b><i>m</i><b id="cd-s">00</b><i>s</i></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CÓMO ACTÚA -->
-<section>
+<!-- CÓMO SE USA: la línea que se llena de burbujas -->
+<section class="dp-sec dp-agua dp-pasos-sec">
   <div class="wrap">
-    <h2 class="center">¿Cómo funciona DRAINPRO?</h2>
-    <p class="lead">Su fórmula profesional reacciona con el agua y genera una acción efervescente que disuelve grasa, residuos y obstrucciones, devolviéndole el flujo a tus tuberías en minutos.</p>
-    <div class="steps">
-      <div class="step"><div class="n">1</div><div><h3>Aplica</h3><p>Vierte el polvo directo en el desagüe tapado (lavaplatos, inodoro, ducha o cañería).</p></div></div>
-      <div class="step"><div class="n">2</div><div><h3>Reacciona</h3><p>Agrega agua caliente: la fórmula burbujea y disuelve la grasa y los residuos acumulados.</p></div></div>
-      <div class="step"><div class="n">3</div><div><h3>Destapa</h3><p>En unos minutos el agua vuelve a fluir libremente. Sin herramientas ni plomero.</p></div></div>
+    <span class="dp-rot">Cómo se usa</span>
+    <h2 class="dp-h2">Tres pasos, <em>sin herramientas.</em></h2>
+    <div class="dp-linea">
+      <span class="dp-riel" aria-hidden="true"><i></i></span>
+      <ol class="dp-pasos">
+        <li class="dp-paso"><span class="dp-nodo" aria-hidden="true">1</span><h3>Echas el polvo</h3><p>De 50 a 100 g directo en el desagüe seco: lavaplatos, ducha, lavamanos o inodoro.</p></li>
+        <li class="dp-paso"><span class="dp-nodo" aria-hidden="true">2</span><h3>Agregas agua caliente</h3><p>Una taza, a unos 60 °C (no hirviendo). El oxígeno activo empieza a burbujear y a desprender la grasa, el pelo y los restos.</p></li>
+        <li class="dp-paso"><span class="dp-nodo" aria-hidden="true">3</span><h3>Esperas 20 minutos y enjuagas</h3><p>El agua vuelve a bajar y se lleva todo lo que estaba tapando. En atascos duros, repites la aplicación.</p></li>
+      </ol>
     </div>
   </div>
 </section>
 
-<!-- GALERÍA DE BANNERS (carrusel, después de los pasos) -->
-<section>
+<!-- ANTES / DESPUÉS REAL -->
+<section class="dp-sec dp-ba">
   <div class="wrap">
-    <div class="carousel">
-      <div class="imgcard"><img src="img/carrusel1.jpeg" alt="El aliado de tu hogar — modo de uso en 3 pasos" loading="lazy"></div>
-      <div class="imgcard"><img src="img/carrusel2.jpeg" alt="Elimina el bloqueo en segundos" loading="lazy"></div>
-      <div class="imgcard"><img src="img/carrusel3.png" alt="Seguro para tuberías — no daña PVC ni metal" loading="lazy"></div>
-      <div class="imgcard"><img src="img/carrusel4.png" alt="DRAINPRO — destapa sin esfuerzo" loading="lazy"></div>
+    <span class="dp-rot">El cambio</span>
+    <h2 class="dp-h2">La misma cañería, <em>20 minutos después.</em></h2>
+    <p class="dp-sub">Así queda por dentro un tubo con grasa acumulada después de una sola aplicación.</p>
+    <div class="dp-foto dp-rev">
+      <img src="img/dp-real.webp?v=1" alt="Antes y después real: tubería obstruida con grasa y la misma tubería limpia tras usar DRAINPRO" width="832" height="1248" loading="lazy">
+      <span class="dp-scan" aria-hidden="true"></span>
+      <span class="dp-mira" aria-hidden="true"></span>
     </div>
-    <p class="swipe-hint">← desliza para ver más →</p>
   </div>
 </section>
+<div class="dp-cta-franja"><button class="dp-btn dp-btn--ancho" data-scroll="#pedido" data-qty="6">Quiero ese cambio</button></div>
 
-<!-- TENER DRAINPRO EN CASA ES SINÓNIMO DE -->
-<section>
+<!-- DÓNDE LO USAS: tarjetas con linterna -->
+<section class="dp-sec dp-agua dp-usos">
   <div class="wrap">
-    <h2 class="center">Tener DRAINPRO en casa es sinónimo de…</h2>
-    <div class="cardlist">
-      <div class="cardli">Desagües que tragan el agua al instante, sin charcos ni esperas.</div>
-      <div class="cardli">Una cocina y un baño libres de malos olores, frescos todo el día.</div>
-      <div class="cardli">Disolver grasa, cabello, papel y restos de comida sin esfuerzo.</div>
-      <div class="cardli">Olvidarte del plomero y proteger tus tuberías — fórmula no corrosiva, segura para PVC, metal y cobre.</div>
+    <span class="dp-rot">Dónde lo usas</span>
+    <h2 class="dp-h2">Un solo polvo <em>para toda la casa.</em></h2>
+    <p class="dp-pista">Pasa el dedo por las tarjetas</p>
+    <div class="dp-grid">
+      <button type="button" class="dp-tar dp-rev" style="--i:0"><span class="dp-tar-ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8M7 8h4"/></svg></span><b>Lavaplatos</b><span>Grasa y restos de comida endurecidos</span></button>
+      <button type="button" class="dp-tar dp-rev" style="--i:1"><span class="dp-tar-ico"><svg viewBox="0 0 24 24"><path d="M4 20V8a4 4 0 0 1 8 0v1"/><path d="M14 9h6M17 9v3M13 15l1 3M17 15v3M21 15l-1 3"/></svg></span><b>Ducha</b><span>Pelo y jabón: el agua se convierte en piscina</span></button>
+      <button type="button" class="dp-tar dp-rev" style="--i:2"><span class="dp-tar-ico"><svg viewBox="0 0 24 24"><path d="M6 4h12v6H6z"/><path d="M4 10h16v3a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z"/><path d="M9 19v2M15 19v2"/></svg></span><b>Inodoro</b><span>Papel y atascos sin desarmar nada</span></button>
+      <button type="button" class="dp-tar dp-rev" style="--i:3"><span class="dp-tar-ico"><svg viewBox="0 0 24 24"><path d="M4 12h16l-2 6H6z"/><path d="M12 4v5M9 9h6"/></svg></span><b>Lavamanos</b><span>Mal olor que vuelve aunque limpies</span></button>
     </div>
-    <p class="synrec">Modo de uso: vierte el polvo en el desagüe, agrega una taza de agua caliente y deja actuar unos minutos. Sin herramientas ni plomero.</p>
-    <button class="btn btn--cta btn--block" data-scroll="#pedido">Quiero destapar mis cañerías hoy</button>
   </div>
 </section>
 
-<!-- FÓRMULA MILENARIA -->
-<section>
+<!-- LA FÓRMULA + fotos -->
+<section class="dp-sec dp-formula">
   <div class="wrap">
-    <h2 class="center">Fórmula profesional con tecnología de oxígeno activo</h2>
-    <p class="bodytext">DRAINPRO actúa por efervescencia de oxígeno activo: al contacto con el agua libera presión y calor controlados que desprenden la grasa, el cabello y los residuos atrapados en tus tuberías.</p>
-    <ul class="bullets">
-      <li>⚡ Acción efervescente potente</li>
-      <li>🛡️ Seguro para PVC, metal y cobre</li>
-      <li>🌿 No corrosivo, sin químicos peligrosos</li>
-      <li>🏅 El destapador más potente de Chile</li>
-    </ul>
-    <p class="bodytext">Diseñado para destapar sin esfuerzo: sin herramientas, sin plomero y sin dañar tus cañerías. Resultados visibles desde la primera aplicación.</p>
-  </div>
-</section>
-
-<!-- ESTADÍSTICAS -->
-<section>
-  <div class="wrap">
-    <h2 class="center">Resultados que hablan por sí solos</h2>
-    <div class="stats">
-      <div class="stat"><span class="ic">🚿</span><b>96%</b><p>destapó su desagüe en la primera aplicación.</p></div>
-      <div class="stat"><span class="ic">👃</span><b>93%</b><p>notó que desaparecieron los malos olores de las cañerías.</p></div>
-      <div class="stat"><span class="ic">💧</span><b>90%</b><p>evitó llamar al plomero y se ahorró el gasto.</p></div>
-      <div class="stat"><span class="ic">⭐</span><b>98%</b><p>lo recomienda y lo tiene siempre en casa para emergencias.</p></div>
+    <span class="dp-rot">Qué es</span>
+    <h2 class="dp-h2">No es soda cáustica: <em>es oxígeno activo.</em></h2>
+    <p class="dp-sub">Al contacto con el agua caliente libera presión y calor controlados que desprenden la grasa, el pelo y los residuos atrapados. No es corrosivo, así que no daña PVC, metal ni cobre, y no deja el olor a químico de los destapadores líquidos.</p>
+    <div class="dp-fichas">
+      <figure class="dp-fi dp-rev">
+        <div class="dp-fi-foto"><img src="img/dp-antesdespues1.webp?v=1" alt="Antes y después: lavaplatos sucio y con desagüe lento, y el mismo lavaplatos limpio con el agua bajando" width="900" height="900" loading="lazy"><span class="dp-telon dp-t1"></span><span class="dp-telon dp-t2"></span></div>
+        <figcaption><span class="dp-rot">Cocina</span><b>De lento y con olor, a bajar de una</b><p>La grasa se endurece dentro del tubo y un día no baja nada. El oxígeno activo la desprende sin meter alambres ni desarmar el sifón.</p></figcaption>
+      </figure>
+      <figure class="dp-fi dp-rev">
+        <div class="dp-fi-foto"><img src="img/dp-antesdespues2.webp?v=1" alt="Antes y después: desagüe de ducha atascado con pelo y el mismo desagüe limpio" width="900" height="900" loading="lazy"><span class="dp-telon dp-t1"></span><span class="dp-telon dp-t2"></span></div>
+        <figcaption><span class="dp-rot">Baño</span><b>El pelo y el jabón se van solos</b><p>Lo que se enreda en la rejilla de la ducha y no sale ni con la mano, se disuelve y se va con el enjuague.</p></figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
 <!-- COMPARATIVA -->
-<section class="compare">
+<section class="dp-sec dp-agua dp-cmp">
   <div class="wrap">
-    <h2 class="center">¿Qué nos hace diferentes?</h2>
-    <p class="lead">No te conformes con destapadores líquidos que dañan tus tuberías. DRAINPRO destapa con la fuerza del oxígeno activo.</p>
-    <table>
-      <thead><tr><th class="feat">Característica</th><th class="us">DRAINPRO</th><th class="otros">Otros destapadores</th></tr></thead>
+    <span class="dp-rot">Qué lo hace distinto</span>
+    <h2 class="dp-h2">Contra los <em>destapadores líquidos.</em></h2>
+    <table class="dp-tabla">
+      <thead><tr><th></th><th class="us">DRAINPRO</th><th>Líquidos</th></tr></thead>
       <tbody>
-        <tr><td>Disuelve grasa, cabello, papel y restos de comida.</td><td class="us">✅</td><td class="otros">❌</td></tr>
-        <tr><td>No corrosivo: seguro para PVC, metal, cobre y fierro.</td><td class="us">✅</td><td class="otros">❌</td></tr>
-        <tr><td>Elimina los malos olores de raíz, no solo los tapa.</td><td class="us">✅</td><td class="otros">❌</td></tr>
+        <tr><td>Disuelve grasa, pelo, papel y restos de comida</td><td class="us">Sí</td><td>A medias</td></tr>
+        <tr><td>Seguro para PVC, metal, cobre y fierro</td><td class="us">Sí</td><td>No: son corrosivos</td></tr>
+        <tr><td>Quita el mal olor de raíz</td><td class="us">Sí</td><td>Lo tapa un rato</td></tr>
+        <tr><td>Un frasco por desagüe, guardado para la próxima</td><td class="us">Sí</td><td>Se acaba en un uso</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
-<!-- RESEÑAS (estilo Judge.me) -->
-<section class="reviews" id="resenas">
+<!-- RESEÑAS (los ids los usa app.js) -->
+<section class="dp-sec reviews" id="resenas">
   <div class="wrap">
-    <h2 class="rev-title center">Experiencias Reales <span class="stars">★★★★★</span></h2>
+    <span class="dp-rot">Opiniones</span>
+    <h2 class="rev-title dp-h2">Lo que cuentan <em>después de usarlo.</em></h2>
     <div class="rev-score"><span class="big">4.9</span><span class="cnt"><span id="revCount">110</span> reseñas</span></div>
-
     <div class="rev-bars">
       <div class="bar"><span class="lvl">5 ★</span><div class="track"><i style="width:89%"></i></div><b>98</b></div>
       <div class="bar"><span class="lvl">4 ★</span><div class="track"><i style="width:8%"></i></div><b>9</b></div>
@@ -242,15 +200,12 @@ fbq('track','PageView');
       <div class="bar"><span class="lvl">2 ★</span><div class="track"><i style="width:0"></i></div><b>0</b></div>
       <div class="bar"><span class="lvl">1 ★</span><div class="track"><i style="width:0"></i></div><b>0</b></div>
     </div>
-
     <div class="rev-photos">
-      <img src="img/resena1.avif" alt="Reseña de cliente — producto recibido" loading="lazy">
-      <img src="img/resena2.avif" alt="Reseña de cliente — producto recibido" loading="lazy">
-      <img src="img/resena4.avif" alt="Reseña de cliente — producto recibido" loading="lazy">
+      <img src="img/resena1.avif" alt="Foto de cliente con el producto recibido" loading="lazy">
+      <img src="img/resena2.avif" alt="Foto de cliente con el producto recibido" loading="lazy">
+      <img src="img/resena4.avif" alt="Foto de cliente con el producto recibido" loading="lazy">
     </div>
-
     <button class="btn-write" id="btnWrite">Escribir una reseña</button>
-
     <div class="rev-list" id="revList"></div>
     <p class="rev-auto-label">Más experiencias de nuestros clientes</p>
     <div class="rev-auto"><div class="rev-auto__track" id="revAuto"></div></div>
@@ -273,116 +228,59 @@ fbq('track','PageView');
   </div>
 </div>
 
-<!-- ANTES / DESPUÉS -->
-<section>
+<!-- GARANTÍA + FAQ -->
+<section class="dp-sec dp-agua dp-gar">
   <div class="wrap">
-    <h2 class="center">El cambio radical en tus cañerías</h2>
-    <p class="lead">Pasa de un desagüe tapado, lento y con mal olor a un flujo libre y limpio en minutos. Sin destapar tuberías ni llamar al plomero.</p>
-    <div class="ba-card">
-      <img src="img/antesdespues1.png" alt="Antes y después: lavaplatos sucio y lento vs. limpio y con flujo libre" loading="lazy">
-      <p>De un lavaplatos con suciedad, malos olores y desagüe lento… a uno limpio, sin olores y con flujo libre.</p>
+    <div class="dp-gar-caja">
+      <span class="dp-rot">Garantía</span>
+      <h2 class="dp-h2">Si no destapa, <em>te devolvemos la plata.</em></h2>
+      <p class="dp-sub">Y como pagas contra entrega, no arriesgas nada: solo pagas cuando lo tienes en la mano.</p>
     </div>
-    <div class="ba-card">
-      <img src="img/antesdespues2.png" alt="Antes y después: desagüe atascado vs. destapado y reluciente" loading="lazy">
-      <p>De un desagüe atascado y sucio… a uno totalmente destapado y reluciente.</p>
-    </div>
-  </div>
-</section>
-
-<!-- MARQUEE 2 -->
-<div class="marquee marquee--teal">
-  <div class="marquee__track">
-    <span>✅ Envío gratis a Chile</span><span>🔒 Compra 100% segura</span><span>📦 Stock limitado</span><span>⭐ +500 clientes satisfechos</span><span>💯 Resultados garantizados</span><span>🛡️ Seguro para tus tuberías</span>
-    <span aria-hidden="true">✅ Envío gratis a Chile</span><span aria-hidden="true">🔒 Compra 100% segura</span><span aria-hidden="true">📦 Stock limitado</span><span aria-hidden="true">⭐ +500 clientes satisfechos</span><span aria-hidden="true">💯 Resultados garantizados</span><span aria-hidden="true">🛡️ Seguro para tus tuberías</span>
-  </div>
-</div>
-
-<!-- DOSIS -->
-<section>
-  <div class="wrap">
-    <h2 class="center">Modo de uso recomendado</h2>
-    <hr class="divider">
-    <p class="lead">Vierte de 50 a 100 g de polvo directo en el desagüe seco. Agrega una taza de agua caliente (a unos 60 °C, no hirviendo) y deja actuar de 20 a 30 minutos sin correr agua. Luego enjuaga normalmente: la fórmula arrastra todos los residuos disueltos. Sin herramientas y sin plomero.</p>
-  </div>
-</section>
-
-<!-- GARANTÍA -->
-<section class="garantia">
-  <div class="wrap">
-    <h2 class="center">🛡️ Garantía de satisfacción</h2>
-    <p class="lead">Si DRAINPRO no destapa tu desagüe, te devolvemos tu dinero. Y como pagas contra entrega, compras con total confianza: solo pagas cuando lo recibes en tu casa.</p>
-  </div>
-</section>
-
-<!-- TU SEGURO DE VIDA -->
-<section>
-  <div class="wrap">
-    <h2 class="center seguro-title">DRAINPRO: el aliado de tu hogar</h2>
-    <ul class="seguro-list">
-      <li><span class="ck">✅</span> Destapa lavaplatos, lavamanos, duchas, inodoros y cañerías.</li>
-      <li><span class="ck">✅</span> Elimina los malos olores de raíz, no solo los disimula.</li>
-      <li><span class="ck">✅</span> No corrosivo: cuida tus tuberías de PVC, metal y cobre.</li>
-      <li><span class="ck">✅</span> Fácil de usar: sin herramientas, sin químicos peligrosos y sin plomero.</li>
-    </ul>
-    <button class="btn btn--cta btn--naranja btn--block" data-scroll="#pedido">compra y paga al recibir</button>
-    <div class="trust-boxes">
-      <div class="tb">🔒 Compra Segura</div>
-      <div class="tb">🚀 Envío Gratis</div>
-      <div class="tb">⭐ Garantía de Calidad</div>
+    <div class="dp-faq" id="faq">
+      <details open><summary>¿En cuánto tiempo destapa?</summary><div class="a">En la mayoría de los casos el desagüe queda libre entre 20 y 30 minutos después de aplicarlo. En atascos duros, repite la aplicación.</div></details>
+      <details><summary>¿Daña las cañerías?</summary><div class="a">No. No es corrosivo: es seguro para PVC, metal, cobre y fierro. No deforma plásticos ni daña las conexiones.</div></details>
+      <details><summary>¿Dónde puedo usarlo?</summary><div class="a">En lavaplatos, lavamanos, duchas, inodoros y cañerías. Funciona con cualquier atasco orgánico: grasa, pelo, papel y restos de comida.</div></details>
+      <details><summary>¿Cuánto rinde un frasco?</summary><div class="a">Un frasco alcanza para una aplicación en un desagüe muy tapado, o dos aplicaciones de mantención. Por eso el pack de 6 es el que más piden.</div></details>
+      <details><summary>¿Hacen envíos a todo Chile?</summary><div class="a">Sí, con envío gratis y pago contra entrega: pagas en efectivo cuando recibes tu pedido en casa.</div></details>
     </div>
   </div>
-  <video class="full-video" autoplay muted loop playsinline controls preload="auto" poster="img/carrusel4.png">
-    <source src="img/drainpro-video.mp4" type="video/mp4">
-    Tu navegador no soporta el video.
-  </video>
 </section>
 
-<!-- FAQ -->
-<section class="faq" id="faq">
+<!-- FORMULARIO COD (todos los ids los usa app.js: no se cambian) -->
+<section class="order dp-sec" id="pedido">
   <div class="wrap">
-    <h2 class="center" style="margin-bottom:16px">¿Tienes preguntas? Estamos aquí para ti</h2>
-    <details open><summary>⏱️ ¿En cuánto tiempo destapa?</summary><div class="a">En la mayoría de los casos el desagüe queda libre entre 20 y 30 minutos después de aplicarlo. En atascos severos puedes repetir la aplicación.</div></details>
-    <details><summary>🛡️ ¿Daña las tuberías?</summary><div class="a">No. DRAINPRO es no corrosivo y 100% seguro para PVC, metal, cobre y fierro. No deforma plásticos ni daña las conexiones.</div></details>
-    <details><summary>🚿 ¿Dónde puedo usarlo?</summary><div class="a">En lavaplatos, lavamanos, duchas, inodoros y cañerías. Funciona con cualquier obstrucción orgánica: grasa, cabello, papel y restos de comida.</div></details>
-    <details><summary>🚚 ¿Hacen envíos a todo Chile?</summary><div class="a">Sí, llegamos a todo el país con envío gratis y pago contra entrega: pagas en efectivo cuando recibes tu pedido en casa.</div></details>
-  </div>
-</section>
-
-<!-- FORMULARIO COD -->
-<section class="order" id="pedido">
-  <div class="wrap">
-    <div class="htitle">Compra hoy y paga en casa</div>
-    <div class="hsub">Sin pagos por adelantado · Recíbelo y paga en efectivo</div>
+    <span class="dp-rot">Pedido</span>
+    <h2 class="dp-h2">Elige tu pack <em>y paga al recibir.</em></h2>
     <div class="formcard">
-      <div class="cod-badge">🔒 Pago 100% seguro contra entrega</div>
+      <div class="cod-badge">Pago contra entrega en todo Chile</div>
       <div class="packs" id="packs">
         <label class="pack" data-qty="3" data-price="19950" data-was="51000">
           <span class="radio"></span>
-          <img class="pack-thumb" src="img/69ba288fb0151.png" alt="">
+          <img class="pack-thumb" src="img/dp-frasco.webp?v=1" alt="">
           <span class="info"><span class="t">3 unidades</span><span class="s">Ahorra 60%</span></span>
           <span class="pr"><span class="n">$19.950</span><span class="w">$51.000</span></span>
         </label>
         <label class="pack sel" data-qty="6" data-price="25500" data-was="102000">
-          <span class="tag">MÁS VENDIDO</span>
+          <span class="tag">MÁS PEDIDO</span>
           <span class="radio"></span>
-          <img class="pack-thumb" src="img/69ba288fb0151.png" alt="">
+          <img class="pack-thumb" src="img/dp-frasco.webp?v=1" alt="">
           <span class="info"><span class="t">6 unidades</span><span class="s">Ahorra 75%</span></span>
           <span class="pr"><span class="n">$25.500</span><span class="w">$102.000</span></span>
         </label>
         <label class="pack" data-qty="10" data-price="34000" data-was="170000">
           <span class="tag">MEJOR PRECIO</span>
           <span class="radio"></span>
-          <img class="pack-thumb" src="img/69ba288fb0151.png" alt="">
+          <img class="pack-thumb" src="img/dp-frasco.webp?v=1" alt="">
           <span class="info"><span class="t">10 unidades</span><span class="s">Ahorra 80%</span></span>
           <span class="pr"><span class="n">$34.000</span><span class="w">$170.000</span></span>
         </label>
       </div>
 
       <div class="summary">
-        <div class="r"><span>Subtotal</span><span id="sumSub">$45.000</span></div>
-        <div class="r"><span>Descuento</span><span id="sumDisc" style="color:var(--rojo)">-$16.010</span></div>
+        <div class="r"><span>Subtotal</span><span id="sumSub">$102.000</span></div>
+        <div class="r"><span>Descuento</span><span id="sumDisc" style="color:var(--rojo)">-$76.500</span></div>
         <div class="r"><span>Envío</span><span class="free">Gratis</span></div>
-        <div class="r tot"><span>Total a pagar al recibir</span><span id="sumTot">$28.990</span></div>
+        <div class="r tot"><span>Total a pagar al recibir</span><span id="sumTot">$25.500</span></div>
       </div>
 
       <form id="orderForm" novalidate>
@@ -423,8 +321,8 @@ fbq('track','PageView');
           <div class="field"><label for="comuna">Comuna</label><select id="comuna" name="comuna" disabled><option value="">Selecciona…</option></select><div class="err">Selecciona tu comuna.</div></div>
         </div>
         <div class="field"><label for="correo">Correo (opcional)</label><input id="correo" name="correo" type="email" inputmode="email" autocomplete="email" placeholder="Ej: maria@gmail.com"></div>
-        <button type="submit" class="btn btn--cta btn--block" id="submitBtn">COMPRAR (Pagar al Recibir)</button>
-        <p class="formnote">🔒 No pagas nada ahora. Te contactamos por WhatsApp para coordinar la entrega.</p>
+        <button type="submit" class="btn btn--cta btn--block dp-btn dp-btn--ancho" id="submitBtn">Pedir y pagar al recibir</button>
+        <p class="formnote">No pagas nada ahora. Te confirmamos por WhatsApp y pagas cuando llega.</p>
       </form>
       <div class="carriers">
         <span class="clabel">Despachamos a todo Chile con</span>
@@ -433,25 +331,12 @@ fbq('track','PageView');
           <span class="cb"><img src="img/logo-starken.png" alt="Starken"></span>
         </div>
       </div>
-
       <div class="ok" id="okMsg">
-        <div class="ic">✅</div>
-        <h3>¡Pedido recibido!</h3>
+        <div class="ic">✓</div>
+        <h3>Pedido recibido</h3>
         <p>Gracias <b id="okName"></b>. Te contactaremos por WhatsApp para confirmar la entrega de tu DRAINPRO.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="wrap">
-    <h2>Suscríbete a nuestros correos</h2>
-    <p>Conoce las nuevas colecciones y las ofertas exclusivas antes que nadie.</p>
-    <form class="inp" onsubmit="return false">
-      <input type="email" placeholder="Correo electrónico" aria-label="Correo electrónico">
-      <button type="submit" aria-label="Suscribir">→</button>
-    </form>
   </div>
 </section>
 
@@ -462,7 +347,6 @@ fbq('track','PageView');
     <p><b>Dirección:</b> Av. Providencia 1208, Oficina 16, Santiago, RM.</p>
     <p><b>Correo:</b> <a href="mailto:gerencia@jayegroup.com.co">gerencia@jayegroup.com.co</a></p>
     <p><b>WhatsApp:</b> <a href="https://wa.me/56964775539">+56 9 6477 5539</a></p>
-
     <div class="social">
       <a href="https://www.facebook.com/share/18bZZKscMB/" target="_blank" rel="noopener" aria-label="Facebook">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M13.4 21v-7.1h2.4l.4-2.8h-2.8V9.3c0-.8.2-1.4 1.4-1.4h1.5V5.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8v2.8h2.4V21h3z"/></svg>
@@ -474,7 +358,6 @@ fbq('track','PageView');
         <svg viewBox="0 0 24 24"><path fill="#25F4EE" d="M15.5 1.8c.3 1.9 1.3 3.3 3.4 3.5v2.7c-1.2 0-2.2-.3-3.2-.9v5.3c0 4-2.9 6.3-6.2 5.5-2.5-.6-3.9-2.7-3.7-5.1.2-2.5 2.4-4.3 5.3-3.9v2.8c-.4-.1-.8-.1-1.2 0-1.1.2-1.9 1-1.9 2.1 0 1.3 1 2.3 2.3 2.3s2.3-1 2.3-2.5V1.8h2.6z"/><path fill="#FE2C55" d="M17.5 3.8c.3 1.9 1.3 3.3 3.4 3.5v2.7c-1.2 0-2.2-.3-3.2-.9v5.3c0 4-2.9 6.3-6.2 5.5-2.5-.6-3.9-2.7-3.7-5.1.2-2.5 2.4-4.3 5.3-3.9v2.8c-.4-.1-.8-.1-1.2 0-1.1.2-1.9 1-1.9 2.1 0 1.3 1 2.3 2.3 2.3s2.3-1 2.3-2.5V3.8h2.6z"/><path fill="#fff" d="M16.5 2.8c.3 1.9 1.3 3.3 3.4 3.5v2.7c-1.2 0-2.2-.3-3.2-.9v5.3c0 4-2.9 6.3-6.2 5.5-2.5-.6-3.9-2.7-3.7-5.1.2-2.5 2.4-4.3 5.3-3.9v2.8c-.4-.1-.8-.1-1.2 0-1.1.2-1.9 1-1.9 2.1 0 1.3 1 2.3 2.3 2.3s2.3-1 2.3-2.5V2.8h2.6z"/></svg>
       </a>
     </div>
-
     <div class="paylabel">Formas de pago</div>
     <div class="paycards">
       <span class="pc pc-amex">AMEX</span>
@@ -482,7 +365,6 @@ fbq('track','PageView');
       <span class="pc pc-mc"><i class="c1"></i><i class="c2"></i></span>
       <span class="pc pc-visa">VISA</span>
     </div>
-
     <div class="links">
       <a href="privacidad.html">Política de privacidad</a> ·
       <a href="reembolso.html">Política de reembolso</a> ·
@@ -501,11 +383,12 @@ fbq('track','PageView');
 
 <!-- STICKY CTA -->
 <div class="stickycta" id="stickycta">
-  <button class="btn" data-scroll="#pedido">Pedir ahora — pago contra entrega</button>
+  <button class="btn dp-btn" data-scroll="#pedido">Pedir ahora · pagas al recibir</button>
 </div>
 
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 <script src="chile-regiones.js?v=3"></script>
-<script src="app.js?v=7"></script>
+<script src="app.js?v=9"></script>
+<script src="dp.js?v=1"></script>
 </body>
 </html>
