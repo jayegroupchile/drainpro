@@ -205,7 +205,7 @@ button{font-family:inherit}
 .rev .rimg{margin-top:8px;border-radius:10px;max-height:220px;object-fit:cover}
 .rev-auto-label{text-align:center;font-weight:700;color:var(--agua);margin:20px 0 10px;font-size:14px}
 .rev-auto{overflow:hidden;margin:0 -20px}
-.rev-auto__track{display:flex;gap:10px;width:max-content;padding:6px 20px;animation:revscroll 60s linear infinite}
+.rev-auto__track{display:flex;gap:10px;width:max-content;padding:6px 20px;animation:revscroll 160s linear infinite}
 @keyframes revscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .rev-auto:hover .rev-auto__track{animation-play-state:paused}
 .rev-auto .rev{flex:0 0 205px;border:1px solid var(--lineaL);border-radius:12px;padding:12px}
