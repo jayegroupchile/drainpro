@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Barlow+Condensed:wght@800&family=Inter:wght@200;300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=24">
+<link rel="stylesheet" href="style.css?v=26">
 <!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -50,20 +50,19 @@ fbq('track','PageView');
 
 <!-- HERO: video a sangre, letras arriba en cascada -->
 <section class="dp-hero" id="inicio">
-  <div class="dp-burbujas" aria-hidden="true"></div>
-  <div class="dp-sobre">
-    <span class="dp-rot dp-casc" style="--d:.1s">Oxígeno activo · sin gásfiter · sin soda cáustica</span>
-    <h1 class="dp-h1">
-      <span class="dp-ln"><span class="dp-pal" style="--d:.25s">El</span> <span class="dp-pal" style="--d:.34s">desagüe</span> <span class="dp-pal" style="--d:.43s">tapado,</span></span>
-      <span class="dp-ln"><em><span class="dp-pal" style="--d:.55s">destapado</span> <span class="dp-pal" style="--d:.64s">en</span> <span class="dp-pal" style="--d:.73s">20</span> <span class="dp-pal" style="--d:.82s">minutos.</span></em></span>
-    </h1>
-    <p class="dp-frase dp-casc" style="--d:1s">Lo echas, agregas agua caliente y el agua vuelve a bajar. Lavaplatos, ducha, lavamanos e inodoro.</p>
+  <div class="dp-hero-foto">
+    <img src="img/dp-hero.webp?v=3" alt="Frasco de DRAINPRO junto al desagüe de un lavaplatos con el agua burbujeando" width="1080" height="1919" fetchpriority="high">
+    <div class="dp-burbujas" aria-hidden="true"></div>
+    <div class="dp-sobre">
+      <span class="dp-rot dp-casc" style="--d:.1s">Oxígeno activo · sin gásfiter · sin soda cáustica</span>
+      <h1 class="dp-h1">
+        <span class="dp-ln"><span class="dp-pal" style="--d:.25s">El</span> <span class="dp-pal" style="--d:.34s">desagüe</span> <span class="dp-pal" style="--d:.43s">tapado,</span></span>
+        <span class="dp-ln"><em><span class="dp-pal" style="--d:.55s">destapado</span> <span class="dp-pal" style="--d:.64s">en</span> <span class="dp-pal" style="--d:.73s">20</span> <span class="dp-pal" style="--d:.82s">minutos.</span></em></span>
+      </h1>
+      <p class="dp-frase dp-casc" style="--d:1s">Lo echas, agregas agua caliente y el agua vuelve a bajar. Lavaplatos, ducha, lavamanos e inodoro.</p>
+    </div>
   </div>
-  <div class="dp-hero-foto dp-casc" style="--d:.6s">
-    <img src="img/dp-hero.webp?v=2" alt="Frasco de DRAINPRO, polvo destapador de cañerías" width="1080" height="1350" fetchpriority="high">
-    <span class="dp-hero-velo" aria-hidden="true"></span>
-  </div>
-  <div class="dp-sobre dp-hero-pie">
+  <div class="dp-hero-pie">
     <div class="dp-hero-cta dp-casc" style="--d:1.15s">
       <button class="dp-btn" data-scroll="#pedido" data-qty="6">Quiero destaparlo <span>6 unidades · $25.500</span></button>
       <span class="dp-hero-nota">Envío gratis · pagas al recibir</span>

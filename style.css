@@ -57,22 +57,22 @@ button{font-family:inherit}
 .dp-logo-g{color:#d8a52e;font-weight:700}
 .dp-head-cta{border:1.5px solid var(--amar);background:transparent;color:var(--amar);font-family:var(--disp);font-weight:900;font-size:16px;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:999px;cursor:pointer}
 
-/* ---------- HERO: letras arriba, foto mas pequena debajo (26-09 James: "la imagen es mas pequena") ---------- */
-.dp-hero{position:relative;overflow:hidden;background:var(--noche);padding:34px 0 30px;border-radius:0}
-.dp-burbujas{position:absolute;left:0;right:0;top:20%;bottom:0;z-index:0;pointer-events:none}
+/* ---------- HERO: la imagen completa de fondo, letras ENCIMA en la parte oscura de arriba, frasco sin tapar (26-09 James) ---------- */
+.dp-hero{position:relative;background:var(--noche);padding:0;border-radius:0}
+.dp-hero-foto{position:relative;overflow:hidden;background:var(--noche);max-width:640px;margin:0 auto}
+.dp-hero-foto img{width:100%;height:auto;display:block}
+.dp-hero-foto::before{content:'';position:absolute;left:0;right:0;top:0;height:42%;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(6,26,46,.55),rgba(6,26,46,0))}
+.dp-burbujas{position:absolute;left:0;right:0;top:20%;bottom:0;z-index:1;pointer-events:none}
 .dp-burbujas i{position:absolute;bottom:-10px;left:var(--x);width:6px;height:6px;border-radius:50%;border:1.5px solid rgba(126,227,245,.9);background:rgba(126,227,245,.15);opacity:0;animation:dp-sube var(--t) linear var(--r) infinite}
 @keyframes dp-sube{0%{opacity:0;transform:translate3d(0,0,0) scale(var(--s))}10%{opacity:.9}100%{opacity:0;transform:translate3d(12px,-60vh,0) scale(calc(var(--s)*.6))}}
-.dp-sobre{position:relative;z-index:2;padding:0 22px}
-.dp-hero .dp-rot{color:var(--cian2);font-size:12.5px}
-.dp-h1{margin:0 0 12px;font-family:var(--disp);font-weight:900;font-size:clamp(44px,12.4vw,80px);line-height:.9;letter-spacing:.005em;text-transform:uppercase;color:#fff;text-shadow:0 2px 26px rgba(0,0,0,.5)}
+.dp-sobre{position:absolute;left:0;right:0;top:0;z-index:2;padding:22px 20px 0}
+.dp-hero .dp-rot{color:var(--cian2);font-size:12px;margin-bottom:8px}
+.dp-h1{margin:0 0 8px;font-family:var(--disp);font-weight:900;font-size:clamp(36px,10.2vw,62px);line-height:.9;letter-spacing:.005em;text-transform:uppercase;color:#fff;text-shadow:0 2px 22px rgba(0,0,0,.75),0 0 4px rgba(0,0,0,.5)}
 .dp-h1 .dp-ln{display:block;overflow:hidden;padding:.12em 0 .06em;margin-top:-.12em}
 .dp-h1 .dp-pal{display:inline-block}
 .dp-h1 em{font-style:normal;color:var(--amar)}
-.dp-frase{margin:0 0 16px;max-width:34ch;font-size:15px;line-height:1.55;color:#dbe7f1}
-.dp-hero-foto{position:relative;z-index:1;margin:0 22px;border-radius:18px;overflow:hidden;background:#0b1520;box-shadow:0 22px 48px rgba(0,0,0,.45);max-width:520px}
-.dp-hero-foto img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center;display:block}
-.dp-hero-velo{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(6,26,46,.55) 0%,rgba(6,26,46,0) 28%,rgba(6,26,46,0) 70%,rgba(6,26,46,.6) 100%)}
-.dp-hero-pie{padding-top:18px}
+.dp-frase{margin:0;max-width:55%;font-size:14px;line-height:1.45;color:#e6eef5;text-shadow:0 1px 10px rgba(0,0,0,.85)}
+.dp-hero-pie{position:relative;z-index:2;padding:16px 20px 26px;max-width:640px;margin:0 auto}
 .dp-hero-cta{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
 .dp-hero-nota{font-family:var(--disp);font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cian2)}
 /* cascada (solo si dp.js puso .dp-arranca) */
@@ -80,7 +80,7 @@ button{font-family:inherit}
 .dp-arranca .dp-casc{opacity:0;transform:translateY(12px)}
 .dp-listo .dp-h1 .dp-pal{transform:none;opacity:1;transition:transform .75s cubic-bezier(.3,1.35,.5,1) var(--d,0s),opacity .35s ease var(--d,0s)}
 .dp-listo .dp-casc{opacity:1;transform:none;transition:opacity .6s ease var(--d,0s),transform .6s var(--ease) var(--d,0s)}
-@media (min-width:820px){.dp-hero{padding:64px 0 50px}.dp-sobre{padding:0 40px;max-width:1080px;margin:0 auto}.dp-frase{max-width:44ch;font-size:17px}.dp-hero-foto{margin:0 auto}}
+@media (min-width:820px){.dp-sobre{padding:34px 32px 0}.dp-frase{max-width:40ch;font-size:16px}}
 
 /* ---------- video del producto ---------- */
 .dp-video-sec{background:#fff}
