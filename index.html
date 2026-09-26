@@ -10,8 +10,8 @@
 <meta property="og:type" content="product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Barlow+Condensed:wght@800&family=Inter:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=22">
 <!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -340,39 +340,74 @@ fbq('track','PageView');
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="wrap">
-    <h3 class="ftitle">JAYE GROUP - CHILE</h3>
-    <p><b>Dirección:</b> Av. Providencia 1208, Oficina 16, Santiago, RM.</p>
-    <p><b>Correo:</b> <a href="mailto:gerencia@jayegroup.com.co">gerencia@jayegroup.com.co</a></p>
-    <p><b>WhatsApp:</b> <a href="https://wa.me/56964775539">+56 9 6477 5539</a></p>
-    <div class="social">
-      <a href="https://www.facebook.com/share/18bZZKscMB/" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M13.4 21v-7.1h2.4l.4-2.8h-2.8V9.3c0-.8.2-1.4 1.4-1.4h1.5V5.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8v2.8h2.4V21h3z"/></svg>
-      </a>
-      <a href="https://www.instagram.com/jaye.group?igsh=aXB6eHhzMzhoazg4" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".62" stop-color="#d62976"/><stop offset="1" stop-color="#962fbf"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="6.5" fill="url(#ig)"/><rect x="6" y="6" width="12" height="12" rx="4" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="3.1" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="16.8" cy="7.2" r="1.05" fill="#fff"/></svg>
-      </a>
-      <a href="https://tiktok.com/@jaye.group" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg viewBox="0 0 24 24"><path fill="#25F4EE" d="M15.5 1.8c.3 1.9 1.3 3.3 3.4 3.5v2.7c-1.2 0-2.2-.3-3.2-.9v5.3c0 4-2.9 6.3-6.2 5.5-2.5-.6-3.9-2.7-3.7-5.1.2-2.5 2.4-4.3 5.3-3.9v2.8c-.4-.1-.8-.1-1.2 0-1.1.2-1.9 1-1.9 2.1 0 1.3 1 2.3 2.3 2.3s2.3-1 2.3-2.5V1.8h2.6z"/><path fill="#FE2C55" d="M17.5 3.8c.3 1.9 1.3 3.3 3.4 3.5v2.7c-1.2 0-2.2-.3-3.2-.9v5.3c0 4-2.9 6.3-6.2 5.5-2.5-.6-3.9-2.7-3.7-5.1.2-2.5 2.4-4.3 5.3-3.9v2.8c-.4-.1-.8-.1-1.2 0-1.1.2-1.9 1-1.9 2.1 0 1.3 1 2.3 2.3 2.3s2.3-1 2.3-2.5V3.8h2.6z"/><path fill="#fff" d="M16.5 2.8c.3 1.9 1.3 3.3 3.4 3.5v2.7c-1.2 0-2.2-.3-3.2-.9v5.3c0 4-2.9 6.3-6.2 5.5-2.5-.6-3.9-2.7-3.7-5.1.2-2.5 2.4-4.3 5.3-3.9v2.8c-.4-.1-.8-.1-1.2 0-1.1.2-1.9 1-1.9 2.1 0 1.3 1 2.3 2.3 2.3s2.3-1 2.3-2.5V2.8h2.6z"/></svg>
-      </a>
+<!-- FOOTER: el mismo pie de la tienda jayegroup.com.co (26-09 James: "ponme el de la tienda") -->
+<footer class="pie">
+  <div class="envoltorio">
+    <div class="cols">
+      <details class="col">
+        <summary>Atención al cliente<i class="mas"></i></summary>
+        <div class="dentro">
+          <a href="envio.html">Envíos y entregas</a>
+          <a href="envio.html">Seguir mi pedido</a>
+          <a href="reembolso.html">Cambios y devoluciones</a>
+          <a href="contacto.html">Contáctanos</a>
+        </div>
+      </details>
+      <details class="col">
+        <summary>Políticas<i class="mas"></i></summary>
+        <div class="dentro">
+          <a href="terminos.html">Términos y condiciones</a>
+          <a href="privacidad.html">Política de privacidad</a>
+          <a href="reembolso.html">Política de reembolsos</a>
+          <a href="reembolso.html">Política de cambios y garantía</a>
+          <a href="envio.html">Política de envíos</a>
+          <a href="privacidad.html">Tratamiento de datos</a>
+        </div>
+      </details>
+      <div class="col contacto">
+        <h4>Contacto</h4>
+        <p><a href="mailto:gerencia@jayegroup.com.co">gerencia@jayegroup.com.co</a></p>
+        <p><a href="https://wa.me/56964775539" target="_blank" rel="noopener">WhatsApp +56 9 6477 5539</a></p>
+        <p>Providencia 1208, Oficina 16<br>Santiago, Región Metropolitana</p>
+        <p>Despacho a todo Chile</p>
+      </div>
     </div>
-    <div class="paylabel">Formas de pago</div>
-    <div class="paycards">
-      <span class="pc pc-amex">AMEX</span>
-      <span class="pc pc-diners"><i></i>Diners</span>
-      <span class="pc pc-mc"><i class="c1"></i><i class="c2"></i></span>
-      <span class="pc pc-visa">VISA</span>
+    <div class="boletin">
+      <h4>Recibe nuestras ofertas</h4>
+      <p class="dice">Te avisamos cuando entren productos nuevos y cuando haya descuentos. Sin spam.</p>
+      <form id="fBoletin" novalidate>
+        <input type="email" id="correoBoletin" placeholder="Tu correo electrónico" autocomplete="email" required>
+        <label class="acepto">
+          <input type="checkbox" id="aceptoBoletin" required>
+          <span>Acepto recibir correos con ofertas y novedades, según la <a href="privacidad.html">política de privacidad</a>.</span>
+        </label>
+        <button type="submit">Suscribirme</button>
+      </form>
     </div>
-    <div class="links">
-      <a href="privacidad.html">Política de privacidad</a> ·
-      <a href="reembolso.html">Política de reembolso</a> ·
-      <a href="terminos.html">Términos del servicio</a> ·
-      <a href="envio.html">Política de envío</a> ·
-      <a href="contacto.html">Información de contacto</a>
+    <div class="redes">
+      <span class="rot">Síguenos</span>
+      <div class="iconos">
+        <a href="https://www.instagram.com/jaye.group" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="34" height="34"><defs><linearGradient id="jig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".62" stop-color="#d62976"/><stop offset="1" stop-color="#962fbf"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="6.5" fill="url(#jig)"/><rect x="6" y="6" width="12" height="12" rx="4" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="3.1" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="16.8" cy="7.2" r="1.05" fill="#fff"/></svg>
+        </a>
+        <a href="https://www.facebook.com/1021271641058424" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="34" height="34"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M13.4 21v-7.1h2.4l.4-2.8h-2.8V9.3c0-.8.2-1.4 1.4-1.4h1.5V5.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8v2.8h2.4V21h3z"/></svg>
+        </a>
+        <a href="https://wa.me/56964775539" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="34" height="34"><circle cx="12" cy="12" r="12" fill="#25D366"/><path fill="#fff" d="M17 14.4c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.6.9-.8 1-.1.2-.3.2-.5.1a7.3 7.3 0 0 1-3.6-3.2c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5v-.5c-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3z"/><path fill="#fff" d="M12 3.5A8.4 8.4 0 0 0 4.7 16l-1.2 4.5 4.6-1.2A8.4 8.4 0 1 0 12 3.5zm0 15.3c-1.3 0-2.5-.3-3.5-1l-.3-.1-2.6.7.7-2.6-.2-.3a6.9 6.9 0 1 1 5.9 3.3z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@jaye.group" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="34" height="34"><circle cx="12" cy="12" r="12" fill="#010101"/><g transform="translate(12,12) scale(0.6) translate(-12,-12)"><path fill="#25F4EE" d="M15.8 5.1a4.3 4.3 0 0 1-1.07-2.82h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .71-5.08V8.94a5.72 5.72 0 0 0-.71-.05 5.68 5.68 0 1 0 5.68 5.68V8.18a7.35 7.35 0 0 0 4.29 1.37V6.46A4.28 4.28 0 0 1 15.8 5.1z"/><path fill="#FE2C55" d="M17.4 6.54a4.3 4.3 0 0 1-1.07-2.82h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .71-5.08v-3.16a5.72 5.72 0 0 0-.71-.05 5.68 5.68 0 1 0 5.68 5.68V9.62a7.35 7.35 0 0 0 4.29 1.37V7.9a4.28 4.28 0 0 1-3.22-1.36z"/><path fill="#fff" d="M16.6 5.82A4.28 4.28 0 0 1 15.53 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .71-5.08V9.66a5.72 5.72 0 0 0-.71-.05 5.68 5.68 0 1 0 5.68 5.68V8.9a7.35 7.35 0 0 0 4.29 1.37V7.18a4.28 4.28 0 0 1-3.22-1.36z"/></g></svg>
+        </a>
+      </div>
     </div>
-    <div class="legal">© <span id="year"></span>, JAYE GROUP</div>
+    <div class="marca-grande">
+      <span class="j">JAYE</span><i class="raya"></i><span class="g">GROUP</span>
+    </div>
+    <div class="abajo">
+      <small>© <span id="year"></span> Jaye Group Chile. Todos los derechos reservados.</small>
+      <small>Envío gratis · Pago contra entrega en todo Chile</small>
+    </div>
   </div>
 </footer>
 
@@ -389,6 +424,6 @@ fbq('track','PageView');
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 <script src="chile-regiones.js?v=3"></script>
 <script src="app.js?v=9"></script>
-<script src="dp.js?v=1"></script>
+<script src="dp.js?v=2"></script>
 </body>
 </html>

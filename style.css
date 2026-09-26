@@ -283,27 +283,52 @@ button{font-family:inherit}
 .formnote{font-size:11.5px;color:var(--gris);text-align:center;margin-top:10px}
 .form-help-wa{margin-top:10px;font-size:13px;text-align:center}
 
-/* ---------- footer (contenido intacto) ---------- */
-.footer{background:var(--noche);color:#dbe7f1;padding:34px 0 28px;text-align:center}
-.footer .ftitle{font-family:var(--disp);color:#fff;font-size:24px;letter-spacing:.08em;margin-bottom:16px}
-.footer p{font-size:14.5px;margin-bottom:7px;line-height:1.5}
-.footer p b{color:#fff}
-.footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
-.footer .social{display:flex;justify-content:center;gap:34px;margin:26px 0}
-.footer .social svg{width:26px;height:26px;display:block}
-.footer .paylabel{font-size:13px;color:#9fb3c6;margin-bottom:10px}
-.paycards{display:flex;justify-content:center;gap:9px;margin-bottom:22px;flex-wrap:wrap}
-.pc{display:inline-flex;align-items:center;justify-content:center;gap:3px;background:#fff;border:1px solid #e6e6e6;border-radius:6px;width:54px;height:34px;padding:0;font-weight:900;font-size:12px;font-style:italic;overflow:hidden;color:#111}
-.pc-amex{background:#1f72cd;color:#fff;font-style:normal;letter-spacing:.02em}
-.pc-diners{color:#0a4fb5;font-style:normal;font-weight:800;font-size:9.5px}
-.pc-diners i{width:13px;height:13px;border-radius:50%;background:radial-gradient(circle at 35% 50%,#0a4fb5 48%,#e8eef8 50%);flex:0 0 auto}
-.pc-mc i{width:16px;height:16px;border-radius:50%;display:inline-block}
-.pc-mc .c1{background:#eb001b;margin-right:-7px}
-.pc-mc .c2{background:#f79e1b;mix-blend-mode:multiply}
-.pc-visa{color:#1a1f71;letter-spacing:.04em;font-size:13px}
-.footer .links{display:block;margin:10px 0;font-size:13.5px;line-height:2}
-.footer .links a{color:#fff}
-.footer .legal{font-size:12px;opacity:.65;border-top:1px solid rgba(255,255,255,.12);padding-top:14px;margin-top:12px;line-height:1.6}
+/* ---------- pie: IDÉNTICO al de la tienda jayegroup.com.co (copiado tal cual de tienda.css .pie) ---------- */
+.pie{background:#0F0E0C;color:#9A9384;padding:34px 16px 26px;text-align:left;font-family:'Inter',system-ui,sans-serif}
+.pie .envoltorio{max-width:1180px;margin:0 auto}
+.pie .cols{display:grid;gap:0}
+@media (min-width:760px){ .pie .cols{grid-template-columns:repeat(3,1fr);gap:34px} }
+.pie .col{border-bottom:1px solid #23211C}
+@media (min-width:760px){ .pie .col{border-bottom:0} }
+.pie summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:16px 0;color:#fff;font-family:'Barlow Condensed','Inter',sans-serif;font-weight:800;text-transform:uppercase;font-size:16px;letter-spacing:.04em}
+.pie summary::-webkit-details-marker{display:none}
+.pie .mas{position:relative;width:14px;height:14px;flex:none}
+.pie .mas::before,.pie .mas::after{content:'';position:absolute;background:#fff;transition:transform .25s ease}
+.pie .mas::before{left:0;top:6px;width:14px;height:1.6px}
+.pie .mas::after{left:6px;top:0;width:1.6px;height:14px}
+.pie details[open] .mas::after{transform:scaleY(0)}
+@media (min-width:760px){ .pie .mas{display:none} .pie summary{cursor:default;padding:0 0 14px} }
+.pie .dentro{display:flex;flex-direction:column;gap:11px;padding:0 0 18px}
+.pie .dentro a,.pie .contacto a{color:#BEB8AC;font-size:14px;text-decoration:none}
+.pie .dentro a:hover,.pie .contacto a:hover{color:#fff}
+.pie .contacto{padding:16px 0 18px}
+.pie .contacto h4{margin:0 0 12px;color:#fff;font-family:'Barlow Condensed','Inter',sans-serif;font-weight:800;text-transform:uppercase;font-size:16px;letter-spacing:.04em}
+@media (min-width:760px){ .pie .contacto h4{margin-bottom:14px} }
+.pie .contacto p{margin:0 0 9px;font-size:14px;color:#BEB8AC}
+.pie .boletin{border-top:1px solid #23211C;padding:24px 0 22px;margin-top:8px}
+.pie .boletin h4{margin:0 0 7px;color:#fff;text-align:center;font-family:'Barlow Condensed','Inter',sans-serif;font-weight:800;text-transform:uppercase;font-size:17px;letter-spacing:.05em}
+.pie .boletin .dice{margin:0 auto 14px;max-width:44ch;text-align:center;font-size:13px;color:#9A9384;font-weight:300;line-height:1.6}
+.pie .boletin form{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:0 auto}
+.pie .boletin input[type=email]{width:100%;background:#fff;border:1px solid #23211C;color:#1a1814;padding:13px 14px;font-size:15px;font-family:inherit;border-radius:0}
+.pie .boletin input[type=email]:focus{outline:2px solid #D8A52E;outline-offset:-2px}
+.pie .boletin .acepto{display:flex;gap:9px;align-items:flex-start;font-size:12px;color:#9A9384;font-weight:300;line-height:1.5}
+.pie .boletin .acepto input{margin-top:2px;flex:none;accent-color:#D8A52E}
+.pie .boletin .acepto a{color:#BEB8AC;text-decoration:underline}
+.pie .boletin button{background:#D8A52E;color:#0F0E0C;border:0;padding:13px;cursor:pointer;font-family:'Barlow Condensed','Inter',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:15px;transition:background .18s}
+.pie .boletin button:hover{background:#E8B84A}
+.pie .gracias{text-align:center;color:#D8A52E;font-size:14px;font-weight:600;padding:8px 0}
+.pie .redes{text-align:center;padding:26px 0 22px;border-top:1px solid #23211C;margin-top:8px}
+.pie .redes .rot{display:block;margin-bottom:14px;color:#fff;font-family:'Barlow Condensed','Inter',sans-serif;font-weight:800;text-transform:uppercase;font-size:15px;letter-spacing:.09em}
+.pie .iconos{display:flex;justify-content:center;gap:13px}
+.pie .iconos a{display:block;transition:transform .18s,opacity .18s;opacity:.9}
+.pie .iconos svg{width:26px;height:26px;display:block}
+.pie .iconos a:hover{transform:translateY(-2px);opacity:1}
+.pie .marca-grande{display:flex;align-items:center;justify-content:center;padding:6px 0 16px;font-family:'Inter','Barlow Condensed',sans-serif;text-transform:uppercase;line-height:1}
+.pie .marca-grande .j{font-weight:800;font-size:22px;color:#fff;letter-spacing:-.005em}
+.pie .marca-grande .g{font-weight:200;font-size:17px;color:#fff;letter-spacing:.15em}
+.pie .marca-grande .raya{display:inline-block;width:1.5px;height:26px;background:#D8A52E;margin:0 12px 0 13px;flex:none}
+.pie .abajo{border-top:1px solid #23211C;padding-top:16px;text-align:center;display:flex;flex-direction:column;gap:5px}
+.pie .abajo small{font-size:12px;color:#7E7869}
 
 /* ---------- páginas legales (se conservan) ---------- */
 .legal-head{background:var(--noche);position:sticky;top:0;z-index:40}

@@ -104,6 +104,18 @@
     t.addEventListener('pointerup', function () { setTimeout(function () { t.classList.remove('dp-luz'); }, 650); });
   });
 
+  /* ---- boletín del pie (mismo comportamiento que la tienda, ficha.js) ---- */
+  var fb = document.getElementById('fBoletin');
+  if (fb) {
+    fb.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var c = document.getElementById('correoBoletin'), ok = document.getElementById('aceptoBoletin');
+      if (!c.value || c.value.indexOf('@') < 0) { c.focus(); return; }
+      if (ok && !ok.checked) { ok.focus(); return; }
+      fb.outerHTML = '<p class="gracias">Listo. Te avisamos cuando haya novedades.</p>';
+    });
+  }
+
   /* ---- entradas al aparecer (con red de seguridad) ---- */
   if (!QUIETO && 'IntersectionObserver' in window) {
     var els = document.querySelectorAll('.dp-rev');
